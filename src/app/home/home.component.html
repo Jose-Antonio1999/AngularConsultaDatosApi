@@ -1,0 +1,52 @@
+
+<br>
+<div class="container">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+              <form class="form"> 
+                <div class="form-group">
+                  <div *ngIf="messageAlert" class="alert alert-danger" role="alert">
+                    {{message}}
+                  </div>
+                  <img [src]="imagenUser" alt="">
+                  <label for="exampleInputEmail1">Ingrese su DNI</label>
+                  <!--Para utilizar ngModel de debe importar en imports y ademas se debe poner un name a la etiqueta-->
+                  <input type="text" name="dni" [(ngModel)]="dniConsulta" class="form-control" placeholder="Dni" autocomplete="off">
+                  <small class="form-text text-muted">Sus datos no serán preservados en esta web.</small>
+                </div>
+                <button (click)="verDni()" class="btn btn-primary">Consultar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</div>
+<br>
+<div class="container" id="divResultados">
+<img *ngIf="verGif"  class="gifCargar" src="https://rubico.com.mx/cultivandoelentendimiento/assets/img/demo/loader.gif" alt="">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" *ngIf="verResultados">
+        <div class="card" *ngIf="!verGif">
+            <h5 class="card-header">Datos</h5>
+            <div class="card-body">
+              <form class="form"> 
+                <div class="form-group">
+                  <b>Dni: </b>{{consulta.dni}} <br>
+                  <b>Nombres: </b> {{consulta.nombres}} <br>
+                  <b>Apellido Paterno: </b> {{consulta.apellidoPaterno}} <br>
+                  <b>Apellido Materno: </b> {{consulta.apellidoMaterno}}
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</div>
+

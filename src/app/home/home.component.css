@@ -1,0 +1,30 @@
+label{
+    font-family: Verdana,  Tahoma;
+}
+img{
+    margin-top: -5px;
+    height: 40px;
+    width: 40px;
+}
+input{
+    background:#E8F0FE;
+}
+.gifCargar{
+    height: 100px;
+    width: 170px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+#divResultados{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color: #16A05D;
+}
+h5,b{
+    color: #000;
+}
+form{
+    font-family: Verdana,  Tahoma;
+}
